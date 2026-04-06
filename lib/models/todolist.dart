@@ -1,12 +1,14 @@
-// models/note.dart
+// models/todolist.dart
 import 'package:isar/isar.dart';
 
 // this line is needed to generate file
 // then run dart run build_runner build
-part 'note.g.dart';
+part 'todolist.g.dart';
 
 @Collection()
-class Note {
+class Todolist {
   Id id = Isar.autoIncrement;
-  late String text;
+  late String title;
+  late DateTime deadline;
+  late bool isDone = false;
 }
